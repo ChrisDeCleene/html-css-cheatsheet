@@ -49,15 +49,15 @@ let themeMenu = document.getElementById('themeselect')
 
 themeMenu.addEventListener('click', menuCreator);
 
-// Back option
-function goBack(){
+// close option
+function closeThemeBar(){
     let themebar = document.getElementsByClassName('theme-menu');
     themebar[0].style.right = '-100%';
 }
 
-let back = document.getElementById('back');
+let close = document.getElementById('close');
 
-back.addEventListener('click', goBack);
+close.addEventListener('click', closeThemeBar);
 
 //Theme Dark
 function darkTheme() {
