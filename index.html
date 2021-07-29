@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <!-- title -->
+  <title>HTML/CSS Cheatsheet</title>
+  <meta property='og:title'  content='HTML/CSS Cheatsheet'>
+  <meta name='twitter:title' content='HTML/CSS Cheatsheet'>
+  <!-- url -->
+  <link rel='canonical'       href='https://chrisdecleene.github.io/html-css-cheatsheet/'>
+  <meta property='og:url'  content='https://chrisdecleene.github.io/html-css-cheatsheet/'>
+  <meta name='twitter:url' content='https://chrisdecleene.github.io/html-css-cheatsheet/'>
+  <!-- description -->
+  <meta name='description'         content='The purpose of this cheatsheet is expand on my own knowledge by creating a tool for me to use for reference. I will update as I learn more. Click here to check it out!'>
+  <meta property='og:description'  content='The purpose of this cheatsheet is expand on my own knowledge by creating a tool for me to use for reference. I will update as I learn more. Click here to check it out!'>
+  <meta name='twitter:description' content='The purpose of this cheatsheet is expand on my own knowledge by creating a tool for me to use for reference. I will update as I learn more. Click here to check it out!'>
+  <!-- image -->
+  <meta property="og:image"  content="https://chrisdecleene.github.io/html-css-cheatsheet/images/cheatsheetogimage.png">
+  <meta name="twitter:image" content="https://chrisdecleene.github.io/html-css-cheatsheet/images/cheatsheetogimage.png">
+  <!-- Site Favicon -->
+  <link rel="icon" type="image/png" href="images/CreditCardChrisFavicon.png" size="32x32" />
+</head>
+
+<body class="">
+  <header class="header">
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#html" class="nav-link">HTML</a>
+        </li>
+        <li class="nav-item">
+          <a href="#boilerplate" class="nav-link">Getting Started</a>
+        </li>
+        <li class="nav-item">
+          <a href="#text" class="nav-link">Text</a>
+        </li>
+        <li class="nav-item">
+          <a href="#semantic" class="nav-link">Semantic</a>
+        </li>
+        <li class="nav-item">
+          <a href="#links" class="nav-link">Links</a>
+        </li>
+        <li class="nav-item">
+          <a href="#lists" class="nav-link">Lists</a>
+        </li>
+        <li class="nav-item">
+          <a href="#table" class="nav-link">Tables</a>
+        </li>
+        <li class="nav-item">
+          <a href="#css" class="nav-link">CSS</a>
+        </li>
+        <li class="nav-item">
+          <a href="#selectors" class="nav-link">Selectors</a>
+        </li>
+        <li class="nav-item">
+          <a href="#text-properties" class="nav-link">Text Properties</a>
+        </li>
+      </ul>
+    
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+
+    <div class="themebar">
+      <ul class="theme-menu">
+        <li id="dark" class="theme-item">Dark</li>
+        <li id="light" class="theme-item">Light</li>
+        <li id="colorful"class="theme-item">Colorful</li>
+        <li id="back" class="theme-item">Go Back</li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <h1>HTML/CSS Cheatsheet</h1>
+    
+    <div>
+      <h2>Pick a theme:</h2>
+      <button id="randomize">Randomize</button>
+      <h3>Or Pick The Theme Yourself</h3>
+      <button id="themeselect">Theme Options</button>
+    </div>
+
+    <script src="script.js"></script>
+
+    <section>
+    <h2 id="html">HTML (HyperText Markup Language)</h2>
+      <div>
+        <p><strong>HTML</strong> is the most basic building block of the Web. It defines the    meaning and structure of web content.</p>
+        
+        <p>"Hypertext" refers to links that connect web pages to one another, either within a     single website or between websites. Links are a fundamental aspect of the Web. By   uploading   content to the Internet and linking it to pages created by other people, you  become an  active participant in the World Wide Web.</p>
+        
+        <p>HTML uses "markup" to annotate text, images, and other content for display in a Web    browser. An HTML element is set off from other text in a document by "tags", which  consist   of the element name surrounded by "<code>&lt;</code>" and "<code>&gt;</code>".&  nbsp; The  name of an element inside a tag is case insensitive. That is, it can be  written in   uppercase, lowercase, or a mixture. For example, the <>&lt;title&gt;</  code> tag can be  written as <code>&lt;Title&gt;</code>, <code>&lt;TITLE&gt;</code>, or   in any other way.</p>
+        
+        <p><em>Description courtesy of <a href="https://developer.mozilla.org/en-US/docs/Web/ HTML"  target="_blank">MDN Web Docs</a></em></p>
+      </div>
+      <img class="html-anatomy"src="images/html-anatomy.jpg" alt="Anatomy of an HTML element">
+    </section>
+
+
+    <section id="boilerplate">
+    
+      <h3>HTML Getting Started</h3>
+    
+      <table>
+        <thead>
+          <tr>
+            <th>Tag</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+    
+        <tbody>
+          <tr>
+            <td><span class="code">&lt;html&gt;</span></td>
+            <td>HTML tag</td>
+            <td>The opening &lt;html&gt; indicates that anything between it and a closing &lt;/html&gt; tag is HTML code.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;body&gt;</span></td>
+            <td>Body tag</td>
+            <td>Everything inside this element is shown inside the main browser window.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;head&gt;</span></td>
+            <td>Head tag</td>
+            <td>This contains information <em>about</em> the page (rather than what is shown within the main part of the browser window). You will usually find a <span class="code">&lt;title&gt;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;title&gt;</span></td>
+            <td>Title tag</td>
+            <td>The contents of the <span class="code">&lt;title&gt;</span> element are either shown in the top of the browser or in the tab for that page.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><em>Descriptions courtesy of <a href="http://htmlandcssbook.com/" target="_blank">HTML&CSS: design and build websites</a> by Jon Duckett</em></p>
+    
+      <figure>
+        <img src="images/boilerplate.png" alt="Example of boilerplate">
+        <figcaption>Here is an example of what the required boilerplate for HTML5 looks like.</figcaption>
+      </figure>
+    </section>
+
+    <section id="text">
+    
+      <h3>HTML Text</h3>
+    
+      <table>
+        <thead>  
+          <tr>
+            <th>Tag</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="code">&lt;h1&gt;</span>, <span class="code">&lt;h2&gt;</span>, ...<span class="code">&lt;h6&gt;</span></td>
+            <td>Heading elements</td>
+            <td>HTML can use six different levels of heading elements. The heading elements are ordered from the highest level <span class="code">&lt;h1&gt;</span> to the lowest level <span class="code">&lt;h6&gt;</span>.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;p&gt;</span></td>
+            <td>Paragraph element</td>
+            <td>This element contains and displays a block of text.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;div&gt;</span></td>
+            <td>Division element</td>
+            <td> This element is used as a container that divides an HTML document into sections and is short for “division”. <span class="code">&lt;div&gt;</span> elements can contain flow content such as headings, paragraphs, links, images, etc.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;span&gt;</span></td>
+            <td>Span element</td>
+            <td>This element is an inline container for text and can be used to group text for styling purposes. It can be used inside a <span class="code">&lt;p&gt;</span> element to add a specific style to a section of the text.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;em&gt;</span></td>
+            <td>Emphasis element</td>
+            <td>This element emphasizes text and browsers will usually <em>italicize</em> the emphasized text by default.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;strong&gt;</span></td>
+            <td>Bold element</td>
+            <td>This element highlights important, serious, or urgent text and browsers will normally render this highlighted text in <strong>bold</strong> by default.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;br&gt;</span></td>
+            <td>Line Break element</td>
+            <td>This element will create a line break in text and is especially useful where a division of text is required, like in a postal address. The line break element requires only an opening tag and must not have a closing tag.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><em>Description courtesy of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"  target="_blank">MDN Web Docs</a></em></p>
+
+      <figure>
+        <img src="images/htmltextexample.png" alt="Example of HTML text elements">
+        <figcaption>Here is an example of how the HTML text elements in the table above appear in an HTML document.</figcaption>
+      </figure>
+
+      <div class="image-warning">
+        <p><strong>**Open this site on your desktop to see an image example.**</strong></p>
+      </div>
+    </section>
+
+    <section id="semantic">
+
+      <h3>HTML Semantic</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tag</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="code">&lt;header&gt;</span></td>
+            <td>Header Tag</td>
+            <td>Specifies a header for a document or section.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;nav&gt;</span></td>
+            <td>Navigation element</td>
+            <td>Defines a group of navigation links.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;main&gt;</span></td>
+            <td>Main element</td>
+            <td>Specifies the main content of a document.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;footer&gt;</span></td>
+            <td>Footer element</td>
+            <td>Defines a footer for a document or section.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;section&gt;</span></td>
+            <td>Section element</td>
+            <td>Defines a section in a document.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;article&gt;</span></td>
+            <td>Article element</td>
+            <td>Defines independent, self-contained content which makes it easy for other sites to grab and use.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;aside&gt;</span></td>
+            <td>Aside element</td>
+            <td>Defines content aside from the page content. Often used to create sidebars on webpages.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;figure&gt;</span></td>
+            <td>Figure element</td>
+            <td>Specifies self-contained content, like illustrations, diagrams, photos, etc. Will usually contain <span class="code">&lt;img&gt;</span> and <span class="code">&lt;figcaption&gt;</span> elements.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;figcaption&gt;</span></td>
+            <td>Figure Caption element</td>
+            <td>Defines a caption for a <span class="code">&lt;figure&gt;</span> element. Usually used within the <span class="code">&lt;figure&gt;</span> element.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><em>Description courtesy of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"  target="_blank">MDN Web Docs</a></em></p>
+
+      <figure>
+        <img src="images/htmlsemanticexample.png" alt="Example of HTML text elements">
+        <figcaption>Here is an example of how the HTML sematic elements in the table above appear in an HTML document.</figcaption>
+      </figure>
+
+      <div class="image-warning">
+        <p><strong>**Open this site on your desktop to see an image example.**</strong></p>
+      </div>
+    </section>
+
+    <section id="links">
+
+      <h3>HTML Links</h3>
+
+      <table>
+        <thead>
+          <th>Attribute</th>
+          <th>Name</th>
+          <th>Description</th>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><span class="code">&lt;a&gt;</span></td>
+            <td>Anchor tag</td>
+            <td>This element is used to create links with the addition of the <span class="code">href</span> attribute inside the openning tage.The value of the <span class="code">href</span> attribute is the page that you want people to go to when they click on the link.</td>
+          </tr>
+          <tr>
+            <td><span class="code">target</span></td>
+            <td>Target element</td>
+            <td>The <span class="code">target</span> attribute on an <span class="code">&lt;a&gt;</span> element specifies where a hyperlink should be opened. A <span class="code">target</span> value of <span class="code">"_blank"</span> will tell the browser to open the hyperlink in a new tab in modern browsers, or in a new window in older browsers or if the browser has had settings changed to open hyperlinks in a new window.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><em>Description courtesy of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"  target="_blank">MDN Web Docs</a></em></p>
+
+    </section>
+
+    <section  id="lists">
+
+      <h3>HTML Lists</h3>
+
+      <table>
+        <thead>
+          <th>Attribute</th>
+          <th>Name</th>
+          <th>Description</th>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><span class="code">&lt;ul&gt;</span></td>
+            <td>Unordered List</td>
+            <td>This element is used to create a list of items in no particular order. Each individual list item will have a bullet point by default.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;ol&gt;</span></td>
+            <td>Ordered List</td>
+            <td>This element creates a list of items in sequential order. Each list item appears numbered by default.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;li&gt;</span></td>
+            <td>List Item</td>
+            <td>This element creates list items inside unordered (<span class="code">&lt;ul&gt;</span>) and ordered Lists (<span class="code">&lt;ol&gt;</span>).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><em>Description courtesy of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"  target="_blank">MDN Web Docs</a></em></p>
+
+    </section>
+
+    <section id="table">
+
+      <h2>HTML Table Reference</h2>
+
+      <h3>HTML Table Tags</h3>
+
+      <table>
+        <thead>
+          <th>Tag</th>
+          <th>Name</th>
+          <th>Description</th>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><span class="code">&lt;table&gt;</span></td>
+            <td>Table</td>
+            <td>The wrapper element for all HTML tables.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;thead&gt;</span></td>
+            <td>Table Head</td>
+            <td>The set of rows defining the column headers in a <span class="code">&lt;table&gt;</span>.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;tbody&gt;</span></td>
+            <td>Table Body</td>
+            <td>The set of rows containing actual table data.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;tr&gt;</span></td>
+            <td>Table Row</td>
+            <td>The table row container.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;td&gt;</span></td>
+            <td>Table Data</td>
+            <td>The table row container.</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;tfoot&gt;</span></td>
+            <td>Table Foot</td>
+            <td>The set of rows defining the footer in a <span class="code">&lt;table&gt;</span>.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Table Attributes</h3>
+
+      <table>
+        <thead>
+          <th>Attribute</th>
+          <th>Name</th>
+          <th>Description</th>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><span class="code">colspan</span></td> 
+            <td>Column Span</td>
+            <td>Defines how many columns a <span class="code">&lt;td&gt;</span> element should span.</td>
+          </tr>
+          <tr>
+            <td><span class="code">rowspan</span></td>
+            <td>Row Span</td>
+            <td>Defines how many rows a <span class="code">&lt;td&gt;</span> element should span.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><em>Descriptions courtesy of <a href="https://www.codecademy.com/learn" target="_blank">Codecademy</a></em></p>
+
+    </section>
+
+    <section>
+      <h2 id="css">CSS (Cascading Style Sheets)</h2>
+
+      <div>
+        <p><strong>CSS</strong> is a stylesheet language used to describe the presentation of a document written in HTML or XML. CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+
+        <p>CSS is among the core languages of the <strong>open web</strong> and is standardized across Web browsers according to W3C specifications. Previously, development of various parts of CSS specification was done synchronously, which allowed versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, CSS3. However, CSS4 has never become an official version.</p>
+
+        <p><em>Description courtesy of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"  target="_blank">MDN Web Docs</a></em></p>
+      </div>
+
+    </section>
+
+    <section id="selectors">
+
+      <h3>CSS Selectors</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Selector</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Universal Selector</td>
+            <td>Applies to all elements in the document</td>
+            <td><span class="code">* {}</span></td>
+          </tr>
+          <tr>
+            <td>Type Selector</td>
+            <td>Matches element names</td>
+            <td><span class="code">h1, h2, h3 {}</span></td>
+          </tr>
+          <tr>
+            <td>Class Selector</td>
+            <td>Matches an element whose class attribute has a value that matches <br />the one specified after the period symbol</td>
+            <td><span class="code">.note {}</span></td>
+          </tr>
+          <tr>
+            <td>Id Selector</td>
+            <td>Matches an element whose id attribute has a value that matches the <br />one specified after the pound symbol</td>
+            <td><span class="code">#introduction {}</span></td>
+          </tr>
+          <tr>
+            <td>Child Selector</td>
+            <td>Matches an element that is a direct child of another</td>
+            <td><span class="code">li>a {}</span></td>
+          </tr>
+          <tr>
+            <td>Descendant Selector</td>
+            <td>Matches an element that is a descendent of another specified element.</td>
+            <td><span class="code">p a {}</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><em>Descriptions courtesy of <a href="http://htmlandcssbook.com/" target="_blank">HTML&CSS: design and build websites</a> by Jon Duckett</em></p>
+
+    </section>
+
+    <section id="text-properties">
+
+      <h3>CSS Text Properties</h3>
+
+      <table>
+        <thead>
+          <th>Property</th>
+          <th>Description</th>
+          <th>Example</th>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><span class="code">font-family</span></td> 
+            <td>Allows you to specify the typeface that should be used for any text inside the element(s) to which a CSS rule applies.</td>
+            <td><span class="code">font-family: Georgia, Times, serif;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">font-size</span></td> 
+            <td>Enables you to specify a size for the font. There are several ways to do this, but the most common are... PIXELS, PERCENTAGES, and EMS</td>
+            <td><span class="code">font-size: 12px;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">font-weight</span></td> 
+            <td>Allows you to create <strong>bold</strong> text.</td>
+            <td><span class="code">font-weight: bold;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">font-style</span></td> 
+            <td>Allows you to create <em>italic</em> or <em>oblique</em> text.</td>
+            <td><span class="code">font-style: italic;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">text-transform</span></td> 
+            <td>Used to change the case of text giving it one of the following values: uppercase, lowercase, or capitalize.</td>
+            <td><span class="code">text-transform: uppercase;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">text-decoration</span></td> 
+            <td>Allows you to specify one of the following values: none, underline, overline, line-through, or blink.</td>
+            <td><span class="code">text-decoration: underline;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">line-height</span></td> 
+            <td>Increading the line-height makes the vertical gap between lines of text larger.</td>
+            <td><span class="code">line-height: 1.4em;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">letter-spacing</span></td> 
+            <td>Not used often, but can be handy with sentences in all uppercase to make it earier to read. If you change this, you will likely need to change word-spacing too.</td>
+            <td><span class="code">letter-spacing: 0.2em;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">word-spacing</span></td> 
+            <td>Default gap between words is ofen 0.25em. It is rare that you would want to change this unless the typeface is bold.</td>
+            <td><span class="code">word-spacing: 1em;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">text-align</span></td> 
+            <td>Allows you to alignment of ext with one of the following values: left, right, center, or justify.</td>
+            <td><span class="code">text-align: center;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">vertical-align</span></td> 
+            <td>NOT intended to align text in middle of block level. More commonly used with inline elements such as &lt;img&gt;, &lt;em&gt;, or &lt;strong&gt;.</td>
+            <td><span class="code">vertical-align: text-top;</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><em>Descriptions courtesy of <a href="http://htmlandcssbook.com/" target="_blank">HTML&CSS: design and build websites</a> by Jon Duckett</em></p>
+    </section>  
+  </main>
+
+  <footer>
+    <p>Copyright 2021 - Credit Card Chris LLC</p>
+  </footer>
+
+</body>
+</html>
