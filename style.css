@@ -23,9 +23,7 @@
 /*******************************************************************
   IMPORTS SECTION
 *******************************************************************/
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway&display=swap');
-
-@import url("https://fonts.googleapis.com/css?family=Prata:400|Preahvihear:400");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Open+Sans:ital,wght@0,400;0,800;1,400&family=Prata&display=swap');
 
 /*******************************************************************
   RESET SECTION:
@@ -42,7 +40,7 @@
 *******************************************************************/
 
 body {
-  font-family: 'Merriweather', serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 li {
@@ -167,9 +165,13 @@ h1, h2, h3, p, figcaption{
   padding: 10px;
 }
 
+h1, h2, h3, h4, h5{
+  font-family: 'Merriweather', serif;
+}
+
 h1{
   font-size: 48px;
-  font-family: 'Prata';
+  font-family: 'Prata', serif;
 }
 
 h2{
