@@ -111,7 +111,7 @@ a {
   right : -100%;
   flex-direction: column;
   background-color: var(--sonic-silver);
-  width: 150px;
+  width: 200px;
   text-align: center;
   transition: 1s;
   box-shadow:
