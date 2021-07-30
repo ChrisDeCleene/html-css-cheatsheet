@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Open+Sans:ital,wght@0,400;0,800;1,400&family=Prata&display=swap" rel="stylesheet">
+  <!-- title -->
+  <title>HTML Forms</title>
+  <meta property='og:title'  content='HTML Forms'>
+  <meta name='twitter:title' content='HTML Forms'>
+  <!-- url -->
+  <link rel='canonical'       href='https://chrisdecleene.github.io/html-css-cheatsheet/forms.html'>
+  <meta property='og:url'  content='https://chrisdecleene.github.io/html-css-cheatsheet/forms.html'>
+  <meta name='twitter:url' content='https://chrisdecleene.github.io/html-css-cheatsheet/forms.html'>
+  <!-- description -->
+  <meta name='description'         content='Forms collect information from visitors that can be used on the page or stored. Click here to check it out!'>
+  <meta property='og:description'  content='Forms collect information from visitors that can be used on the page or stored. Click here to check it out!'>
+  <meta name='twitter:description' content='Forms collect information from visitors that can be used on the page or stored. Click here to check it out!'>
+  <!-- image -->
+  <meta property="og:image"  content="https://chrisdecleene.github.io/html-css-cheatsheet/images/cheatsheetogimage.png">
+  <meta name="twitter:image" content="https://chrisdecleene.github.io/html-css-cheatsheet/images/cheatsheetogimage.png">
+  <!-- Site Favicon -->
+  <link rel="icon" type="image/png" href="images/CreditCardChrisFavicon.png" size="32x32" />
+</head>
+<body class="">
+  <header class="header">
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#forms" class="nav-link">HTML Forms</a>
+        </li>
+        <li class="nav-item">
+          <a href="#types" class="nav-link">Additional Form Types</a>
+        </li>
+        <li class="nav-item">
+          <a href="#grouping" class="nav-link">Grouping Elements</a>
+        </li>
+        <li class="nav-item">
+          <a href="#validation" class="nav-link">Form Validation</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+    <h1>HTML Forms</h1>
+
+    <div>
+      <button id="randomize" class="little-button">Random Theme</button>
+    </div>
+
+    <script src="script.js"></script>
+
+    <section>
+      <h2 id="forms">Forms</h2>
+        <div>
+          <p>Whenever you want to collect information from visitors you will need a form, which lives inside a <span class="code">&lt;form&gt;</span> element.</p>
+          <p>Information from a form is sent in <em>name/value</em> pairs.</p>
+          <p>Each form control is given a name, and the text the user types in or the values of the options they select are sent to the server.</p>
+          <p><em>Description courtesy of <a href="http://htmlandcssbook.com/" target="_blank">HTML&CSS: design and build websites</a> by Jon Duckett</em></p>
+      </section>
+
+    <section>
+      <h3>HTML Forms</h3>
+
+      <table>
+        <thead>
+          <th>Tag</th>
+          <th>Description</th>
+          <th>Example</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="code">&lt;form&gt;</span></td>
+            <td>This element is responsible for collecting information to send somewhere else.</td>
+            <td><span class="code">&lt;form action="/example.html" method="POST"></form></span></td>
+          </tr>
+          <tr>
+            <td><span class="code">action</span></td>
+            <td>This attribute determines where the information is sent.</td>
+            <td><span class="code"> action="/example.html"</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">method</span></td>
+            <td>This attribute is assigned a HTTP verb that is included in the HTTP request.</td>
+            <td><span class="code">method="POST"</span></td>
+          </tr>
+          <tr >
+            <td class="table-break" colspan="3">Input Element</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;input&gt;</span></td>
+            <td>This element creates an input field on the page. (Self-closing).</td>
+            <td><span class="code">&lt;input type="text" name="username" value="your name here"&gt;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">type</span></td>
+            <td>Attribute of <span class="code">&lt;input&gt;</span> determines how it renders on the web page and what kind of data it can accept.</td>
+            <td><span class="code">type="text"</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">text</span></td>
+            <td>Value for <span class="code">type</span> which restricts user input to text.</td>
+            <td><span class="code">type="text"</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">password</span></td>
+            <td>Value for <span class="code">type</span> which replaces input text with another character line an asterisk (*) or a dot (.)</td>
+            <td><span class="code">type="password"</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">number</span></td>
+            <td>Value for <span class="code">type</span> which restricts what users type into the field to just numbers (and a few special characters like <span class="code">-</span>, <span class="code">+</span>, and <span class="code">.</span>).</td>
+            <td><span class="code">type="number"</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">step</span></td>
+            <td>Attribute of <span class="code">&lt;input&gt;</span> which creates arrows inside the input field to increase or decrease by the value.</td>
+            <td><span class="code">step="1"</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">value</span></td>
+            <td>Attribute for <span class="code">&lt;input&gt;</span> creates a pre-filled text field that users can see when the page renders. </td>
+            <td><span class="code">value="your name here"</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">id</span></td>
+            <td>Attribute for <span class="code">&lt;input&gt;</span> which links the <span class="code">&lt;input&gt;</span> to the <span class="code">&lt;label&gt;</span> when it's value is the same as the <span class="code">&lt;label&gt;</span>s “for” attribute.</td>
+            <td><span class="code">id="username"</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">name</span></td>
+            <td>Attribute of <span class="code">&lt;input&gt;</span> that connects the input to a value when sent to database.</td>
+            <td><span class="code">name="question1"</span></td>
+          </tr>
+          <tr >
+            <td class="table-break" colspan="3">Multiple Option Inputs</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;textarea&gt;</span></td>
+            <td>Used in place of <span class="code">&lt;input&gt;</span> to create a bigger text field for users to write more text. We can add <span class="code">rows</span> and <span class="code">cols</span> to determine the amount of rows and columns for the <span class="code">&lt;textarea&gt;</span>.</td>
+            <td><span class="code">&lt;textarea id="blog" name="blog" rows="5" cols="30"&gt;</span><span class="code"></span></td>
+          </tr>
+          <tr>
+            <td><span class="code">range</span></td>
+            <td>Value for <span class="code">type</span> which limits user number entries with a <span class="code">max</span> and a <span class="code">max</span> value. You can also set the <span class="code">step</span> value to make the slider more fluid.</td>
+            <td><span class="code">&lt;input id="doneness" name="doneness" type="range" min="0" max="5" step="1" value="3"&gt;</span><span class="code"></span></td>
+          </tr>
+          <tr>
+            <td><span class="code">checkbox</span></td>
+            <td>Value for <span class="code">type</span> which creates a checkbox menu of options. Requires a <span class="code">value</span> attribute for naming.</td>
+            <td><span class="code">&lt;input id="anchovy" name="topping" type="checkbox" value="anchovy"&gt;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">radio</span></td>
+            <td>Value for <span class="code">type</span> which creates a multple choice input with only one option.</td>
+            <td><span class="code">&lt;input type="radio" id="two" name="answer" value="2"&gt;</span></td>
+          </tr>
+          <tr >
+            <td class="table-break" colspan="3">Dropdown List</td>
+          </tr>
+          <tr>
+            <td><span class="code">select</span></td>
+            <td>Used in place of <span class="code">&lt;input&gt;</span> to create a dropdown list of options.</td>
+            <td><span class="code">&lt;select id="lunch" name="lunch"&gt;&lt;option value="pizza"&gt;Pizza&lt;/option&gt;&lt;/select&gt;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">option</span></td>
+            <td>Used between opening and closing tags of <span class="code">&lt;select&gt;</span> element to create options for dropdown list.</td>
+            <td><span class="code">&lt;option value="pizza"&gt;Pizza&lt;/option&gt;</span></td>
+          </tr>
+          <tr >
+            <td class="table-break" colspan="3">Datalist Input</td>
+          </tr>
+          <tr>
+            <td><span class="code">list</span></td>
+            <td>Attribute for <span class="code">&lt;input&gt;</span> which links the <span class="code">&lt;input&gt;</span> to the <span class="code">&lt;datalist&gt;</span> when it's value is the same as the <span class="code">&lt;datalist&gt;</span>s "id" attribute.</td>
+            <td><span class="code">list="cities"</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;datalist&gt;</span></td>
+            <td>Used along with <span class="code">&lt;input&gt;</span> to create a dropdown list of options.</td>
+            <td><span class="code">&lt;datalist id="cities"&gt;&lt;option value="New York City"&gt;&lt;/option&gt;&lt;/datalist&gt;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">option</span></td>
+            <td>Used between opening and closing tags of <span class="code">&lt;datalist&gt;</span> with a "value" to create options for dropdown list.</td>
+            <td><span class="code">&lt;option value="New York City"&gt;&lt;/option&gt;</span></td>
+          </tr>
+          <tr >
+            <td class="table-break" colspan="3">Label Element</td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;label&gt;</span></td>
+            <td>this element tells users what the <span class="code">&lt;input&gt;</span> is for. It has an opening and close tag and displays text that is written between the opening and closing tags.</td>
+            <td><span class="code"><span class="code">&lt;label for=”username”&gt;Your Name&lt;/label&gt;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">for</span></td>
+            <td>Attribute for <span class="code">&lt;<label for=""></label>&gt;</span> which links the <span class="code">&lt;label&gt;</span> to the <span class="code">&lt;input&gt;</span> when it's value is the same as the <span class="code">&lt;input&gt;</span>s “id” attribute.</td>
+            <td><span class="code">for="username"</span></td>
+          </tr>
+          <tr >
+            <td class="table-break" colspan="3">Submit Form</td>
+          </tr>
+          <tr>
+            <td><span class="code">submit</span></td>
+            <td>Value for <span class="code">type</span> which creates a submit button.</td>
+            <td><span class="code">type="submit"</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">value</span></td>
+            <td>Value for <span class="code">input</span>. It's contents change the label on the button. THIS IS OPTIONAL</td>
+            <td><span class="code">value="Send"</span></td>
+          </tr>
+          <tr>
+            <td><span class="code"></span></td>
+            <td></td>
+            <td><span class="code"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p><em>Descriptions courtesy of <a href="https://www.codecademy.com/learn" target="_blank">Codecademy</a></em></p>
+    </section>
+
+    <section id="types">
+      <h2>Additional Form Types</h2>
+      <table>
+        <thead>
+          <th>Tag</th>
+          <th>Description</th>
+          <th>Example</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="code">file</span></td>
+            <td>Value for <span class="code">type</span> which allows users to upload a file. The <span class="code">value</span> attribute is required.</td>
+            <td><span class="code">&lt;input type="file" name="user-song"&gt;</span><span class="code"></span></td>
+          </tr>
+          <tr>
+            <td><span class="code">image</span></td>
+            <td>Value for <span class="code">type</span> which allows you to use an image for the submit button.</td>
+            <td><span class="code">&lt;input type="image" src="/example.jpg" width="100" height="20"&gt;</span><span class="code"></span></td>
+          </tr>
+          <tr>
+            <td><span class="code">date</span></td>
+            <td>Value for <span class="code">type</span> which allows you to restrict user response to a date.</td>
+            <td><span class="code">&lt;input type="date" name="depart"&gt;</span><span class="code"></span></td>
+          </tr>
+          <tr>
+            <td><span class="code">email</span></td>
+            <td>Value for <span class="code">type</span> which checks that an email was provided.</td>
+            <td><span class="code">&lt;input type="email" name="email"&gt;</span><span class="code"></span></td>
+          </tr>
+          <tr>
+            <td><span class="code">url</span></td>
+            <td>Value for <span class="code">type</span> which checks that a url was provided.</td>
+            <td><span class="code">&lt;input type="url" name="website"&gt;</span><span class="code"></span></td>
+          </tr>
+          <tr>
+            <td><span class="code">search</span></td>
+            <td>Value for <span class="code">type</span> which creates a search box with a single line of text. You can use <span class="code">placehoder</span> attribute to add words inside the text line.</td>
+            <td><span class="code">&lt;input type="search" name="search" placeholder="Enter keyword"&gt;</span><span class="code"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <section id="grouping">
+      <h2>Grouping Form Elements</h2>
+      <table>
+        <thead>
+          <th>Tag</th>
+          <th>Description</th>
+          <th>Example</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="code">&lt;fieldset&gt;</span></td>
+            <td>this element tells users what the <span class="code">&lt;input&gt;</span> is for. It has an opening and close tag and displays text that is written between the opening and closing tags.</td>
+            <td><span class="code"><span class="code">&lt;fieldset&gt;<br>&lt;legend&gt;&lt;/legend&gt;<br>&lt;input&gt;&lt;/fieldset&gt;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">&lt;legend&gt;</span></td>
+            <td>Attribute for <span class="code">&lt;<label for=""></label>&gt;</span> which links the <span class="code">&lt;label&gt;</span> to the <span class="code">&lt;input&gt;</span> when it's value is the same as the <span class="code">&lt;input&gt;</span>s “id” attribute.</td>
+            <td><span class="code">&lt;legend&gt;Contact Details&lt;/legend&gt;</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="validation">
+      <h2>HTML Form Validation</h2>
+      <table>
+        <thead>
+          <th>Tag</th>
+          <th>Description</th>
+          <th>Example</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="code">&lt;input&gt;</span></td>
+            <td>This element creates an input field on the page. (Self-closing).</td>
+            <td><span class="code">&lt;input type="text" name="username" value="your name here"&gt;</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">required</span></td>
+            <td>Attribute of <span class="code">&lt;input&gt;</span> to require that an input be filled out.</td>
+            <td><span class="code">required</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">min</span></td>
+            <td>Attribute of <span class="code">&lt;input&gt;</span> to set a minimum allowed value. Used for <span class="code">type</span> that require number values such as number and range.</td>
+            <td><span class="code">min="1"</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">max</span></td>
+            <td>Attribute of <span class="code">&lt;input&gt;</span> to set a maximum allowed value. Used for <span class="code">type</span> that require number values such as number and range.</td>
+            <td><span class="code">max="10"</span></td>
+          </tr>
+          <tr >
+            <td class="table-break" colspan="3">Checking Text Length</td>
+          </tr>
+          <tr>
+            <td><span class="code">minlength</span></td>
+            <td>Attribute of <span class="code">&lt;input&gt;</span> to set a minimum allowed characters for a text field.</td>
+            <td><span class="code">minlength="5"</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">maxlength</span></td>
+            <td>Attribute of <span class="code">&lt;input&gt;</span> to set a maximum allowed characters for a text field.</td>
+            <td><span class="code">maxlength="250"</span></td>
+          </tr>
+          <tr>
+            <td><span class="code">pattern</span></td>
+            <td>Attribute of <span class="code">&lt;input&gt;</span> to assign it a regular expression, or regex. Regular expressions are a sequence of characters that make up a search pattern. If the input matches the regex, the form can be submitted.</td>
+            <td><span class="code">pattern="[0-9]{14,16}"</span> checks that the user provided only numbers and the entered at least 14-16 digits</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><em>Descriptions courtesy of <a href="https://www.codecademy.com/learn" target="_blank">Codecademy</a></em></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="forms"></a></li>
+      </ul>
+    </nav>
+    <p><em>Descriptions courtesy of</em></p>
+    <ul>
+      <li><a href="http://htmlandcssbook.com/" target="_blank">HTML&CSS: design and build websites</a> by Jon Duckett</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/ HTML"  target="_blank">MDN Web Docs</a></em></li>
+      <li><a href="https://www.codecademy.com/learn" target="_blank">Codecademy</a></li>
+    </ul>
+    <p>Copyright 2021 - Credit Card Chris LLC</p>
+  </footer>
+</body>
+</html>
